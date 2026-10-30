@@ -2,8 +2,8 @@
 session_start();
 include "config/database.php";
 
-// Only admin access
-if (!isset($_SESSION['user_id']) || $_SESSION['user_role'] !== 'admin') {
+// Admin & Super Admin access
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_role']) || !in_array($_SESSION['user_role'], ['admin', 'super_admin'], true)) {
     header("Location: login.php");
     exit();
 }

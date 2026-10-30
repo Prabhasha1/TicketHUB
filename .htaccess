@@ -1,0 +1,9 @@
+# PWA: correct MIME type for the web app manifest
+AddType application/manifest+json .webmanifest
+
+# Always re-check the service worker so updates roll out immediately
+<Files "sw.js">
+    <IfModule mod_headers.c>
+        Header set Cache-Control "no-cache"
+    </IfModule>
+</Files>

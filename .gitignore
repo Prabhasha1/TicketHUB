@@ -1,0 +1,15 @@
+# Real keys and passwords stay on your machine / the host only.
+# To run the project: copy each config/*.example.php to the same name without ".example" and fill in your keys.
+config/database.php
+config/stripe_config.php
+config/brevo_config.php
+config/google_config.php
+config/sms_config.php
+files/create_admin.php
+
+# Personal university documents (reports, proposal, screenshots)
+Guide-line/
+
+# Runtime files
+logs/*.log
+ticket_qrcodes/
